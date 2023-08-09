@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="saludo">hola <span id="nombre"></span> da costa 34</div>
+   <button id="boton-cambiar">seleccionar</button>
+
+     <script>
+        let nombres = ['seba', 'alex', 'juan', 'pedro']
+        let nombreIndex = 0;
+
+        let spanNombre = document.getElementById ('nombre')
+        let botonCambiar = document.getElementById ('boton-cambiar')
+
+        botonCambiar.addEventListener ('click', () => {
+          nombreIndex = (nombreIndex + 1) % nombres.length;
+          const nuevoNombre = nombres[nombreIndex] 
+          spanNombre.textContent = nuevoNombre                 
+        })
+     </script>
+</body>
+</html>
